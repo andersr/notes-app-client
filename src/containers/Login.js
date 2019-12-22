@@ -37,7 +37,7 @@ export default function Login(props) {
             autoFocus
             type="email"
             value={fields.email}
-            onChange={e => handleFieldChange({email: e.target.value})}
+            onChange={handleFieldChange}
           />
         </FormGroup>
         <FormGroup controlId="password" bsSize="large">
