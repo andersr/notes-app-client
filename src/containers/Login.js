@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import LoaderButton from "../components/LoaderButton";
 import { Auth } from "aws-amplify";
 import "./Login.css";
 import { useFormFields } from '../libs/hooksLib';
@@ -48,9 +49,15 @@ export default function Login(props) {
             type="password"
           />
         </FormGroup>
-        <Button block bsSize="large" disabled={isLoading || !validateForm()} type="submit">
-          {isLoading ? "Signing in..." : "Login"}
-        </Button>
+        <LoaderButton
+  block
+  type="submit"
+  bsSize="large"
+  isLoading={isLoading}
+  disabled={!validateForm()}
+>
+  Login
+</LoaderButton>
       </form>
     </div>
   );
