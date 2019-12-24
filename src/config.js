@@ -1,5 +1,6 @@
 export default {
   MAX_ATTACHMENT_SIZE: 5000000,
+  STRIPE_KEY: "pk_test_wwJm4LjpYVnms3LXsmzSJkk600Iub2tUL8",
     s3: {
       REGION: "us-east-1",
       BUCKET: "andersco-notes-app-uploads"
